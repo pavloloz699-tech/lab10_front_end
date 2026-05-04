@@ -1,0 +1,25 @@
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.sarucel-control-prev-icon {
+    background-image: url('../images/left-arrow.png');
+}
+
+.sarucel-control-prev {
+    left: -100px;
+}
+
+.sarucel-control-next-icon {
+    background-image: url('../images/right-arrow.png');
+}
+
+.sarucel-control-next {
+    right: -100px;
+}
+
+.sarucel-control-next-icon,
+.sarucel-control-prev-icon {
+    width: 40px;
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop - Магазин літаків</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            min-height: 60vh;
+            background: radial-gradient(circle at top right, rgba(13, 110, 253, 0.18), transparent 40%),
+                #ffffff;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+        }
+
+        .product-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">AeroShop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catalog">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Контакти</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-primary position-relative" type="button" id="cartButton">
+                        Кошик
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero d-flex align-items-center py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold">Купуйте літаки для бізнесу та подорожей</h1>
+                        <p class="lead text-secondary">AeroShop — інтернет-магазин польотної техніки. Завжди надійні
+                            моделі,
+                            швидка доставка і професійна підтримка.</p>
+                        <a href="#catalog" class="btn btn-primary btn-lg me-2">Переглянути каталог</a>
+                        <a href="#contact" class="btn btn-outline-secondary btn-lg">Зв'язатися з нами</a>
+                    </div>
+                    <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                        <img src="https://images.pexels.com/photos/35891611/pexels-photo-35891611.jpeg" alt="Airplane"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="fw-bold">Найпопулярніші літаки</h2>
+                        <p class="text-muted">Виберіть свою модель з перевірених авіасистем для приватних і
+                            корпоративних польотів.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100">
+                            <img src="https://images.pexels.com/photos/30494558/pexels-photo-30494558.jpeg"
+                                class="card-img-top" alt="Літак A1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">AeroSwift A1</h5>
+                                <p class="card-text text-muted">Малий пасажирський літак для комфортних поїздок до 6
+                                    осіб.</p>
+                                <div class="mt-auto">
+                                    <p class="fw-bold mb-2">$10,200,000</p>
+                                    <button class="btn btn-primary w-100 add-to-cart" data-name="AeroSwift A1"
+                                        data-price="10200000">Додати в
+                                        кошик</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100">
+                            <img src="https://images.pexels.com/photos/35453766/pexels-photo-35453766.jpeg"
+                                class="card-img-top" alt="Літак B2">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">JetStream B2</h5>
+                                <p class="card-text text-muted">Стильний бізнес-джет з дальністю польоту до 5,000 км.
+                                </p>
+                                <div class="mt-auto">
+                                    <p class="fw-bold mb-2">$8,400,000</p>
+                                    <button class="btn btn-primary w-100 add-to-cart" data-name="JetStream B2"
+                                        data-price="8400000">Додати в
+                                        кошик</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100">
+                            <img src="https://images.pexels.com/photos/36719774/pexels-photo-36719774.jpeg"
+                                class="card-img-top" alt="Літак C3">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">SkyCruiser C3</h5>
+                                <p class="card-text text-muted">Універсальний літачок для тренувань та ділових потреб.
+                                </p>
+                                <div class="mt-auto">
+                                    <p class="fw-bold mb-2">$5,100,000</p>
+                                    <button class="btn btn-primary w-100 add-to-cart" data-name="SkyCruiser C3"
+                                        data-price="5100000">Додати в
+                                        кошик</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card product-card h-100">
+                            <img src="https://images.pexels.com/photos/16634687/pexels-photo-16634687.jpeg"
+                                class="card-img-top" alt="Літак D4">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Falcon D4</h5>
+                                <p class="card-text text-muted">Преміум-гібридний літак для безпеки та економії палива.
+                                </p>
+                                <div class="mt-auto">
+                                    <p class="fw-bold mb-2">$10,900,000</p>
+                                    <button class="btn btn-primary w-100 add-to-cart" data-name="Falcon D4"
+                                        data-price="10900000">Додати в
+                                        кошик</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-5 bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold">Чому обирають AeroShop?</h2>
+                        <p class="text-muted">Ми пропонуємо авіатехніку світового рівня, офіційну підтримку та
+                            консультації на кожному етапі
+                            покупки.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <span class="feature-icon">✈️</span>
+                                <strong class="ms-2">Авторизовані постачальники</strong> — тільки перевірені моделі зі
+                                світовою гарантією.
+                            </li>
+                            <li class="mb-3">
+                                <span class="feature-icon">🛠️</span>
+                                <strong class="ms-2">Технічна підтримка</strong> — допомога в підготовці документації та
+                                обслуговуванні.
+                            </li>
+                            <li class="mb-3">
+                                <span class="feature-icon">🌍</span>
+                                <strong class="ms-2">Доставка по всьому світу</strong> — до аеропорту або на приватну
+                                стоянку.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="https://images.pexels.com/photos/11080086/pexels-photo-11080086.jpeg" alt="Team"
+                            class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold">Зв'яжіться з нами</h2>
+                        <p class="text-muted">Маєте питання або хочете замовити демонстраційний політ? Заповніть форму,
+                            і ми зв'яжемося найближчим часом.</p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Ім'я</label>
+                                <input type="text" class="form-control" id="name" placeholder="Ваше ім'я">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Повідомлення</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Ваш запит"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Надіслати запит</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Контактна інформація</h5>
+                                <p class="card-text mb-2"><strong>Телефон:</strong> +380 67 123 45 67</p>
+                                <p class="card-text mb-2"><strong>Email:</strong> info@aeroshop.ua</p>
+                                <p class="card-text"><strong>Адреса:</strong> Київ, Україна</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Ваш кошик</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="cartItems" class="list-group"></div>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <strong>Всього:</strong>
+                            <span id="cartTotal">$0</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-primary" id="checkoutButton">Оформити замовлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 AeroShop. Магазин літаків. Усі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cartCount = document.getElementById('cartCount');
+        const cartButton = document.getElementById('cartButton');
+        const cartItemsContainer = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutButton = document.getElementById('checkoutButton');
+
+        const cart = [];
+
+        const formatPrice = price => {
+            return `$${price.toLocaleString('en-US')}`;
+        };
+
+        const updateCartUI = () => {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<div class="text-center text-muted">Кошик порожній.</div>';
+            } else {
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    cartItem.innerHTML = `
+                        <div>
+                            <h6 class="my-0">${item.name}</h6>
+                            <small class="text-muted">${formatPrice(item.price)}</small>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-danger remove-item" data-index="${index}">Видалити</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                });
+            }
+
+            cartCount.textContent = cart.length;
+            cartTotal.textContent = formatPrice(total);
+            cartButton.classList.toggle('btn-primary', cart.length > 0);
+            cartButton.classList.toggle('btn-outline-primary', cart.length === 0);
+        };
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.dataset.name;
+                const productPrice = Number(button.dataset.price);
+                cart.push({ name: productName, price: productPrice });
+                updateCartUI();
+
+                const bsAlert = document.createElement('div');
+                bsAlert.className = 'alert alert-success alert-dismissible fade show position-fixed bottom-0 end-0 m-3';
+                bsAlert.style.zIndex = '1080';
+                bsAlert.innerHTML = `
+                    <strong>${productName}</strong> додано до кошика.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                document.body.appendChild(bsAlert);
+                setTimeout(() => {
+                    const alert = bootstrap.Alert.getOrCreateInstance(bsAlert);
+                    alert.close();
+                }, 2500);
+            });
+        });
+
+        cartButton.addEventListener('click', () => {
+            const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+            updateCartUI();
+            cartModal.show();
+        });
+
+        cartItemsContainer.addEventListener('click', event => {
+            if (event.target.classList.contains('remove-item')) {
+                const index = Number(event.target.dataset.index);
+                cart.splice(index, 1);
+                updateCartUI();
+            }
+        });
+
+        checkoutButton.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Ваш кошик порожній. Додайте літак перед оформленням.');
+                return;
+            }
+            alert(`Дякуємо за замовлення! У кошику ${cart.length} товарів на суму ${cartTotal.textContent}.`);
+        });
+
+        updateCartUI();
+    </script>
+</body>
+
+</html>
